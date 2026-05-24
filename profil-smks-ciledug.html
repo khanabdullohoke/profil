@@ -4,6 +4,12 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Profil Sekolah — SMKS Ciledug Al-Musaddadiyah Garut</title>
+<meta name="description" content="Profil lengkap SMKS Ciledug Al-Musaddadiyah Garut — 7 konsentrasi keahlian, akreditasi A, mitra Daihatsu, berdiri sejak 1996. Go Inspiring, Go Learning!"/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:title" content="SMKS Ciledug Al-Musaddadiyah Garut"/>
+<meta property="og:description" content="Sekolah Menengah Kejuruan terkemuka di Garut dengan 7 konsentrasi keahlian dan akreditasi A sejak 1996."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.smkciledugalmusaddadiyah.sch.id"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;0,800;0,900;1,900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -21,7 +27,7 @@
   --tr:.22s cubic-bezier(.4,0,.2,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:68px}
 body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden;line-height:1.6}
 h1,h2,h3,h4,h5,h6{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.15}
 a{text-decoration:none;color:inherit}
@@ -45,19 +51,31 @@ img,svg{display:block}
 .nav-link{color:rgba(255,255,255,.65);font-size:13px;font-weight:600;padding:7px 13px;border-radius:50px;transition:all var(--tr)}
 .nav-link:hover{color:#fff;background:rgba(255,255,255,.1)}
 .nav-link.active{color:#fff;background:rgba(255,255,255,.13)}
+/* Hamburger */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;width:36px;height:36px;flex-shrink:0}
+.nav-hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* Mobile drawer */
+.nav-drawer{display:none;position:fixed;top:60px;left:0;right:0;z-index:999;background:rgba(11,61,145,.98);backdrop-filter:blur(16px);padding:12px 16px 20px;border-bottom:1px solid rgba(66,165,245,.15);flex-direction:column;gap:4px}
+.nav-drawer.open{display:flex}
+.nav-drawer .nav-link{border-radius:10px;padding:10px 16px;font-size:14px}
+.nav-drawer .btn-gold{margin-top:8px;justify-content:center;padding:11px 20px;font-size:13.5px}
 .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--blue-deep);font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:12.5px;padding:8px 18px;border-radius:50px;display:inline-flex;align-items:center;gap:6px;box-shadow:0 4px 16px rgba(255,179,0,.35);transition:transform var(--tr),box-shadow var(--tr);white-space:nowrap}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,179,0,.45)}
 
 /* ══ HERO ══ */
 #hero{
-  min-height:100vh;padding:80px 24px 64px;
+  height:100vh;min-height:600px;padding:80px 24px 64px;
   background:linear-gradient(140deg,#061e5c 0%,#0b3d91 40%,#1565c0 72%,#1e88e5 100%);
-  position:relative;overflow:hidden;display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
 }
 #hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:30px 30px}
 .hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(66,165,245,.14) 0%,transparent 70%);top:-200px;right:-100px;pointer-events:none}
 .hero-glow2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,179,0,.07) 0%,transparent 65%);bottom:-150px;left:-80px;pointer-events:none}
-.hero-inner{max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;display:grid;grid-template-columns:1fr 400px;gap:56px;align-items:center}
+.hero-inner{max-width:1200px;width:100%;position:relative;z-index:2;display:grid;grid-template-columns:1fr 400px;gap:56px;align-items:center;margin:0 auto}
 .hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(255,179,0,.12);border:1px solid rgba(255,179,0,.35);color:var(--gold-light);padding:5px 14px;border-radius:50px;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px}
 .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
@@ -173,7 +191,7 @@ img,svg{display:block}
 .j-icon-purple{background:linear-gradient(135deg,#7b1fa2,#9c27b0)}
 .j-icon-teal{background:linear-gradient(135deg,#0097a7,#00bcd4)}
 .j-icon-orange{background:linear-gradient(135deg,#e65100,#ff6d00)}
-.j-icon-red{background:linear-gradient(135deg,#c62828,var(--blue-mid))}
+.j-icon-red{background:linear-gradient(135deg,#c62828,#ef5350)}
 .j-code{font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:900;color:var(--blue-deep);margin-bottom:5px;letter-spacing:-.01em}
 .j-name{font-size:13px;color:var(--text-mid);line-height:1.45;font-weight:500}
 .j-desc{font-size:11.5px;color:var(--text-muted);margin-top:8px;line-height:1.55;border-top:1px solid rgba(30,136,229,.08);padding-top:8px}
@@ -292,6 +310,7 @@ footer{background:#060d1f;padding:32px 24px;text-align:center}
   .hero-stats{grid-template-columns:repeat(2,1fr)}
   .ug-grid,.prestasi-grid{grid-template-columns:1fr}
   .nav-links{display:none}
+  .nav-hamburger{display:flex}
   .nav-inner,.container{padding-left:18px;padding-right:18px}
   .vm-box{padding:40px 24px}
   .sejarah-wrap,.sambutan-grid{gap:32px}
@@ -323,8 +342,24 @@ footer{background:#060d1f;padding:32px 24px;text-align:center}
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
       Daftar SPMB
     </a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="#visi-misi" class="nav-link">Visi Misi</a>
+  <a href="#jurusan" class="nav-link">Jurusan</a>
+  <a href="#sambutan" class="nav-link">Sambutan</a>
+  <a href="#prestasi" class="nav-link">Prestasi</a>
+  <a href="#ekskul" class="nav-link">Ekskul</a>
+  <a href="#spmb" class="nav-link">SPMB</a>
+  <a href="#kontak" class="nav-link">Kontak</a>
+  <a href="#spmb" class="btn-gold">
+    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
+    Daftar SPMB
+  </a>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -343,7 +378,7 @@ footer{background:#060d1f;padding:32px 24px;text-align:center}
       </div>
       <div class="hero-btns">
         <a href="#jurusan" class="btn-gold">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13"/></svg>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
           Lihat Program Keahlian
         </a>
         <a href="#kontak" class="btn-ghost">
@@ -372,7 +407,7 @@ footer{background:#060d1f;padding:32px 24px;text-align:center}
           <div class="id-row"><span class="id-k">Program Keahlian</span><span class="id-v">7 Konsentrasi</span></div>
         </div>
         <div class="id-footer">
-          <a href="https://www.smkciledugalmusaddadiyah.sch.id" target="_blank">🌐 smkciledugalmusaddadiyah.sch.id</a>
+          <a href="https://www.smkciledugalmusaddadiyah.sch.id" target="_blank" rel="noopener noreferrer">🌐 smkciledugalmusaddadiyah.sch.id</a>
         </div>
       </div>
     </div>
@@ -755,7 +790,7 @@ footer{background:#060d1f;padding:32px 24px;text-align:center}
           </div>
         </div>
         <div style="padding:16px 22px;background:var(--blue-pale);border-top:1px solid rgba(30,136,229,.1)">
-          <p style="font-size:12.5px;color:var(--text-mid);line-height:1.65"><strong>Info lebih lanjut:</strong> Kunjungi <a href="https://www.smkciledugalmusaddadiyah.sch.id" target="_blank" style="color:var(--blue-mid);font-weight:600">smkciledugalmusaddadiyah.sch.id</a> atau hubungi langsung di <strong>(0262) 238585</strong></p>
+          <p style="font-size:12.5px;color:var(--text-mid);line-height:1.65"><strong>Info lebih lanjut:</strong> Kunjungi <a href="https://www.smkciledugalmusaddadiyah.sch.id" target="_blank" rel="noopener noreferrer" style="color:var(--blue-mid);font-weight:600">smkciledugalmusaddadiyah.sch.id</a> atau hubungi langsung di <strong>(0262) 238585</strong></p>
         </div>
       </div>
     </div>
@@ -785,7 +820,7 @@ footer{background:#060d1f;padding:32px 24px;text-align:center}
         </div>
         <div class="kontak-item">
           <div class="kontak-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></div>
-          <div><div class="kontak-k">Website Resmi</div><div class="kontak-v"><a href="https://www.smkciledugalmusaddadiyah.sch.id" target="_blank">smkciledugalmusaddadiyah.sch.id</a></div></div>
+          <div><div class="kontak-k">Website Resmi</div><div class="kontak-v"><a href="https://www.smkciledugalmusaddadiyah.sch.id" target="_blank" rel="noopener noreferrer">smkciledugalmusaddadiyah.sch.id</a></div></div>
         </div>
         <div class="kontak-item">
           <div class="kontak-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg></div>
@@ -794,7 +829,7 @@ footer{background:#060d1f;padding:32px 24px;text-align:center}
       </div>
       <div class="reveal">
         <div class="map-wrap">
-          <iframe src="https://maps.google.com/maps?q=SMK+Ciledug+Al-Musaddadiyah+Jl+Mayor+Syamsu+Garut&output=embed&z=16" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://maps.google.com/maps?q=SMK+Ciledug+Al-Musaddadiyah+Jl+Mayor+Syamsu+Garut&output=embed&z=16" title="Lokasi SMK Ciledug Al-Musaddadiyah Garut" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div style="margin-top:14px;padding:14px 18px;background:#fff;border-radius:var(--radius-sm);border:1px solid rgba(30,136,229,.1)">
           <p style="font-size:12.5px;color:var(--text-muted);line-height:1.7"><strong style="color:var(--text-dark)">Jam Operasional:</strong> Senin – Jumat, 07.00 – 16.00 WIB. Sabtu 07.00 – 13.00 WIB. Untuk informasi SPMB dan kunjungan, silakan hubungi terlebih dahulu.</p>
@@ -810,21 +845,42 @@ footer{background:#060d1f;padding:32px 24px;text-align:center}
   <p class="footer-txt">Jl. Mayor Syamsu No. 2, Jayaraga, Tarogong Kidul, Garut 44151 · NPSN: 20209207</p>
   <p class="footer-txt">Yayasan Al-Musaddadiyah Garut · <em>Go Inspiring, Go Learning!</em></p>
   <p class="footer-txt" style="margin-top:8px">
-    Sumber data: <a href="https://www.smkciledugalmusaddadiyah.sch.id" target="_blank">smkciledugalmusaddadiyah.sch.id</a>
+    Sumber data: <a href="https://www.smkciledugalmusaddadiyah.sch.id" target="_blank" rel="noopener noreferrer">smkciledugalmusaddadiyah.sch.id</a>
   </p>
 </footer>
 
 <script>
+/* Hamburger menu */
+const hamburger=document.getElementById('nav-hamburger');
+const drawer=document.getElementById('nav-drawer');
+hamburger.addEventListener('click',()=>{
+  const open=drawer.classList.toggle('open');
+  hamburger.classList.toggle('open',open);
+  hamburger.setAttribute('aria-expanded',open);
+});
+/* Close drawer on link click */
+drawer.querySelectorAll('a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    drawer.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded','false');
+  });
+});
+
 /* Nav scroll effect */
 const nav=document.getElementById('main-nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>30)},{passive:true});
 
-/* Smooth scroll */
+/* Smooth scroll — offset for fixed nav (60px) */
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
     e.preventDefault();
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+    const id=a.getAttribute('href');
+    const t=document.querySelector(id);
+    if(!t)return;
+    const navH=document.getElementById('main-nav').offsetHeight;
+    const top=t.getBoundingClientRect().top+window.scrollY-navH;
+    window.scrollTo({top,behavior:'smooth'});
   });
 });
 
@@ -837,9 +893,12 @@ const revealObserver=new IntersectionObserver((entries)=>{
     }
   });
 },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach((el,i)=>{
-  el.style.transitionDelay=(i%4)*0.07+'s';
-  revealObserver.observe(el);
+/* Group reveals per parent section so delay resets tiap section */
+document.querySelectorAll('section,footer').forEach(sec=>{
+  sec.querySelectorAll('.reveal').forEach((el,i)=>{
+    el.style.transitionDelay=(i%5)*0.07+'s';
+    revealObserver.observe(el);
+  });
 });
 
 /* Active nav link */
@@ -853,7 +912,7 @@ const sectionObserver=new IntersectionObserver((entries)=>{
       });
     }
   });
-},{threshold:.3});
+},{threshold:.15,rootMargin:'-60px 0px -60% 0px'});
 sections.forEach(s=>sectionObserver.observe(s));
 </script>
 </body>
