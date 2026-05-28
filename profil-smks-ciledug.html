@@ -304,16 +304,43 @@ footer{background:#060d1f;padding:32px 24px;text-align:center}
 @media(max-width:1024px){
   .jurusan-grid{grid-template-columns:repeat(2,1fr)}
   .j-wide{grid-column:span 1}
+  .ug-grid{grid-template-columns:repeat(2,1fr)}
+  .prestasi-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:900px){
   .hero-inner,.vm-grid,.sejarah-wrap,.sambutan-grid,.kontak-grid,.spmb-grid{grid-template-columns:1fr}
   .hero-stats{grid-template-columns:repeat(2,1fr)}
   .ug-grid,.prestasi-grid{grid-template-columns:1fr}
-  .nav-links{display:none}
+  .nav-links,.nav-cta{display:none}
   .nav-hamburger{display:flex}
-  .nav-inner,.container{padding-left:18px;padding-right:18px}
+  .nav-inner,.container{padding-left:16px;padding-right:16px}
   .vm-box{padding:40px 24px}
   .sejarah-wrap,.sambutan-grid{gap:32px}
+  .kepsek-sticky{position:static}
+  #hero{padding:72px 16px 48px;min-height:auto}
+  .hero-inner{gap:32px}
+  .id-card{max-width:480px;margin-inline:auto}
+}
+@media(max-width:480px){
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .hero-btns{flex-direction:column}
+  .hero-btns a{justify-content:center}
+  .vm-box{padding:28px 18px}
+  .vm-h{font-size:22px}
+  .iman-row{flex-direction:column}
+  .iia{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .iia:last-child{border-bottom:none}
+  .section{padding:48px 0}
+  .section-header{margin-bottom:32px}
+  .jurusan-grid{grid-template-columns:1fr}
+  .spmb-grid{gap:20px}
+  .kontak-grid{gap:28px}
+  .map-wrap{height:220px}
+  .fact-stack{flex-direction:row;flex-wrap:wrap}
+  .fact-card{flex:1 1 calc(50% - 6px);min-width:120px}
+  .sejarah-wrap{gap:24px}
+  .sambutan-grid{gap:24px}
+  footer{padding:24px 16px}
 }
 </style>
 </head>
@@ -338,7 +365,7 @@ footer{background:#060d1f;padding:32px 24px;text-align:center}
       <a href="#spmb" class="nav-link">SPMB</a>
       <a href="#kontak" class="nav-link">Kontak</a>
     </div>
-    <a href="#spmb" class="btn-gold">
+    <a href="#spmb" class="btn-gold nav-cta">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
       Daftar SPMB
     </a>
