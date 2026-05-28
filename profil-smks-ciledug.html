@@ -27,7 +27,7 @@
   --tr:.22s cubic-bezier(.4,0,.2,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:68px}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:76px}
 body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden;line-height:1.6}
 h1,h2,h3,h4,h5,h6{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.15}
 a{text-decoration:none;color:inherit}
@@ -67,7 +67,7 @@ img,svg{display:block}
 
 /* ══ HERO ══ */
 #hero{
-  height:100vh;min-height:600px;padding:80px 24px 64px;
+  min-height:100svh;padding:80px 24px 64px;
   background:linear-gradient(140deg,#061e5c 0%,#0b3d91 40%,#1565c0 72%,#1e88e5 100%);
   position:relative;overflow:hidden;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -107,7 +107,7 @@ img,svg{display:block}
 .id-footer{margin-top:18px;padding:10px 14px;background:rgba(255,179,0,.08);border:1px solid rgba(255,179,0,.2);border-radius:10px;text-align:center;font-size:12px}
 .id-footer a{color:var(--gold-light);font-weight:600}
 
-/* ══ SECTION BASE ══ */
+section[id]{scroll-margin-top:76px}
 .section{padding:72px 0}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 .section-header{margin-bottom:48px}
@@ -317,7 +317,7 @@ footer{background:#060d1f;padding:32px 24px;text-align:center}
   .vm-box{padding:40px 24px}
   .sejarah-wrap,.sambutan-grid{gap:32px}
   .kepsek-sticky{position:static}
-  #hero{padding:72px 16px 48px;min-height:auto}
+  #hero{padding:80px 16px 48px;justify-content:flex-start}
   .hero-inner{gap:32px}
   .id-card{max-width:480px;margin-inline:auto}
 }
@@ -898,14 +898,14 @@ drawer.querySelectorAll('a').forEach(a=>{
 const nav=document.getElementById('main-nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>30)},{passive:true});
 
-/* Smooth scroll — offset for fixed nav (60px) */
+/* Smooth scroll — offset for fixed nav (60px) + 16px buffer */
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
     e.preventDefault();
     const id=a.getAttribute('href');
     const t=document.querySelector(id);
     if(!t)return;
-    const navH=document.getElementById('main-nav').offsetHeight;
+    const navH=document.getElementById('main-nav').offsetHeight+16;
     const top=t.getBoundingClientRect().top+window.scrollY-navH;
     window.scrollTo({top,behavior:'smooth'});
   });
