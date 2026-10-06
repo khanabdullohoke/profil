@@ -148,6 +148,10 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
 .tab[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
 .sub{font-size:18px;margin:48px 0 16px}
 .pres li[hidden]{display:none}
+.pres .who{color:var(--ink);font-size:14px;margin-top:8px}
+.pres .meta{font-size:13px;color:var(--muted);margin-top:8px}
+.morewrap{margin-top:24px}
+.more{border-color:var(--navy);color:var(--navy)}
 /* Ekskul */
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chips li{border:1px solid var(--line);background:#fff;padding:9px 18px;border-radius:99px;font-size:14.5px;color:var(--mid)}
@@ -340,18 +344,41 @@ footer b{color:var(--gold-lt);font-family:'Plus Jakarta Sans',sans-serif}
       <div><b>1+</b><span>Alumni beasiswa PKNU Korea</span></div>
     </div>
     <div class="tabs" role="group" aria-label="Filter tingkat prestasi">
-      <button type="button" class="tab" data-f="all" aria-pressed="true">Semua</button>
-      <button type="button" class="tab" data-f="nasional" aria-pressed="false">Tingkat nasional</button>
-      <button type="button" class="tab" data-f="kabupaten" aria-pressed="false">Regional / kabupaten</button>
+      <button type="button" class="tab" data-f="all" aria-pressed="true">Semua (27)</button>
+      <button type="button" class="tab" data-f="nasional" aria-pressed="false">Nasional (5)</button>
+      <button type="button" class="tab" data-f="provinsi" aria-pressed="false">Provinsi (7)</button>
+      <button type="button" class="tab" data-f="regional" aria-pressed="false">Regional (15)</button>
     </div>
     <ul class="pres" id="pres">
-      <li data-level="nasional"><span class="t">Juara 1</span><h3>Karate</h3><p>Tingkat nasional, 2018</p></li>
-      <li data-level="kabupaten"><span class="t">Juara 1</span><h3>Turnamen Voli VI Antar SMK Swasta</h3><p>Tingkat Kabupaten Garut, 2024</p></li>
-      <li data-level="kabupaten"><span class="t">Penghargaan</span><h3>Nominasi Pemain Terbaik Voli</h3><p>Kabupaten Garut, 2024</p></li>
-      <li data-level="kabupaten"><span class="t">Juara 3</span><h3>Bola Voli Putri</h3><p>Tingkat kabupaten/kota, 2019</p></li>
-      <li data-level="kabupaten"><span class="t">Juara 2</span><h3>Bola Voli Putri</h3><p>Tingkat kabupaten/kota, 2018</p></li>
-      <li data-level="sekolah"><span class="t">Juara 1</span><h3>Lomba Desain Teknologi</h3><p>Tingkat sekolah, 2019</p></li>
+      <li data-level="nasional"><span class="t b">Duta Terpilih</span><h3>Roketin Generasi Digital</h3><p>Program Digital Nasional</p><p class="who">Zakira Zahrotul</p><p class="meta">Nasional · Individu</p></li>
+      <li data-level="nasional"><span class="t b">Peserta OSN 2.8</span><h3>Cipta Puisi</h3><p>OSN Tingkat Nasional</p><p class="who">Seni Saripa &amp; Marsya Audina</p><p class="meta">Nasional · Individu</p></li>
+      <li data-level="nasional"><span class="t b">Duta Green Ambassador</span><h3>Green Ambassador, Kementerian Lingkungan Hidup dan Kehutanan</h3><p>November 2023</p><p class="who">M. Raffi Waliyudin &amp; Mesya Safitri</p><p class="meta">Nasional · Tim</p></li>
+      <li data-level="nasional"><span class="t b">Karya Terpilih</span><h3>Penulis Antologi Nasional</h3><p>Sastra Nasional</p><p class="who">Naila Mardina</p><p class="meta">Nasional · Individu</p></li>
+      <li data-level="nasional"><span class="t b">Sekolah Terbaik</span><h3>Student Talented Creation bersama Smartfren</h3><p>2022</p><p class="meta">Nasional · Sekolah</p></li>
+      <li data-level="provinsi"><span class="t b">19 Tim Terbaik</span><h3>Ilmupedia Championship Series 2026, melaju ke Provinsi</h3><p>Telkomsel Eduplay</p><p class="who">Nayla Zulfa Alika, Syarah Zhahirah Insani, Ahmad Syakir Araghib. Pembina: Olivia Putri Marson</p><p class="meta">Provinsi · Tim</p></li>
+      <li data-level="provinsi"><span class="t b">Peserta</span><h3>Lomba Dakwah</h3><p>Tingkat Provinsi</p><p class="who">Dewi</p><p class="meta">Provinsi · Individu</p></li>
+      <li data-level="provinsi"><span class="t b">Finalis</span><h3>Inkubasi Wirausaha OSIS SMK Jabar Masagi: Bisnis Plan Cilok</h3><p>Februari – Mei 2023</p><p class="who">Puput Putri (CEO), Vasya Eprilafani (CFO), Sela Suci Nuraisah (CMO), Zannia Mardiah Al Jarra (COO). Pembina: Nono Kartono, Pendamping: Aliyudin</p><p class="meta">Provinsi · Tim</p></li>
+      <li data-level="provinsi"><span class="t b">Pengurus</span><h3>Forum OSIS Jawa Barat</h3><p>Juli 2023 – Juni 2024</p><p class="who">Sekretaris Umum: Puput Putri. Koordinator Wilayah Garut: Sela Suci Nuraisah</p><p class="meta">Provinsi · Tim</p></li>
+      <li data-level="provinsi"><span class="t b">Finalis</span><h3>Jawara (Jago Wirausaha) Millenial 2023</h3><p>Fakultas Kewirausahaan UNIGA, 15 April – 29 Juli 2023</p><p class="who">Rona Muhamad Permana</p><p class="meta">Provinsi · Individu</p></li>
+      <li data-level="provinsi"><span class="t b">Pengurus</span><h3>Forum OSIS Jawa Barat</h3><p>Juli 2022 – Juni 2023</p><p class="who">Wakil Sekretaris Umum: Puput Putri. Koordinator Wilayah Garut: Ujang Sulton</p><p class="meta">Provinsi · Tim</p></li>
+      <li data-level="provinsi"><span class="t b">Duta Pendidikan</span><h3>Duta Pendidikan Jawa Barat</h3><p>Januari – Mei 2022</p><p class="who">Ujang Sulton</p><p class="meta">Provinsi · Individu</p></li>
+      <li data-level="regional"><span class="t">Juara I</span><h3>Ilmupedia Championship Series</h3><p>Telkomsel Eduplay x SMK CALM, 26 Agustus 2026</p><p class="who">Anisa Fitria, X TKJ</p><p class="meta">Regional · Individu</p></li>
+      <li data-level="regional"><span class="t">Juara II</span><h3>Ilmupedia Championship Series</h3><p>Telkomsel Eduplay x SMK CALM, 26 Agustus 2026</p><p class="who">Putri Rahmadani, X TKJ</p><p class="meta">Regional · Individu</p></li>
+      <li data-level="regional"><span class="t">Juara III</span><h3>Ilmupedia Championship Series</h3><p>Telkomsel Eduplay x SMK CALM, 26 Agustus 2026</p><p class="who">Muh. Ali Syabani, X TKJ</p><p class="meta">Regional · Individu</p></li>
+      <li data-level="regional"><span class="t">Juara II</span><h3>Video Promosi</h3><p>UNIGA</p><p class="who">Tresna Raudhatul</p><p class="meta">Regional · Individu</p></li>
+      <li data-level="regional"><span class="t">Juara II</span><h3>Puisi</h3><p>Qalfest</p><p class="who">Dewi Citra</p><p class="meta">Regional · Individu</p></li>
+      <li data-level="regional"><span class="t">Juara I</span><h3>Bola Voli Putra</h3><p>Gebyar Prestasi Qurrota A&#x27;yun</p><p class="who">Tim Bola Voli Putra</p><p class="meta">Regional · Tim</p></li>
+      <li data-level="regional"><span class="t">Juara III</span><h3>Bola Voli Putra</h3><p>IMAPORA Sport Competition 2026, IPI Garut</p><p class="who">Tim Bola Voli Putra</p><p class="meta">Regional · Tim</p></li>
+      <li data-level="regional"><span class="t b">Peserta</span><h3>Lomba Menyanyi Daerah</h3><p>Tingkat Daerah</p><p class="who">Nur Fuji Yulia</p><p class="meta">Regional · Individu</p></li>
+      <li data-level="regional"><span class="t">Juara</span><h3>Festival Teater Remaja</h3><p>Garut</p><p class="who">Zahra Maesa, R.D. Bintang, Risa Fitri, Nadira Nurmila</p><p class="meta">Regional · Tim</p></li>
+      <li data-level="regional"><span class="t b">Sekolah Terbaik</span><h3>STAR Competition 2022</h3><p>Regional</p><p class="meta">Regional · Sekolah</p></li>
+      <li data-level="regional"><span class="t">Juara I</span><h3>Animasi</h3><p>IPI Garut</p><p class="who">Aliyyana Nabilla</p><p class="meta">Regional · Individu</p></li>
+      <li data-level="regional"><span class="t">Juara I</span><h3>Videografi</h3><p>IPI Garut</p><p class="who">Moch Haikal</p><p class="meta">Regional · Individu</p></li>
+      <li data-level="regional"><span class="t">Juara II</span><h3>Fotografi</h3><p>IPI Garut</p><p class="who">Andi Apriliandi</p><p class="meta">Regional · Individu</p></li>
+      <li data-level="regional"><span class="t">Juara I</span><h3>Film Pendek</h3><p>ITG</p><p class="who">Reikhan &amp; Tim</p><p class="meta">Regional · Tim</p></li>
+      <li data-level="regional"><span class="t">Juara II</span><h3>Liga Cup Basket Putri</h3><p>Regional</p><p class="who">Tim Basket Putri</p><p class="meta">Regional · Tim</p></li>
     </ul>
+    <p class="morewrap"><button type="button" class="tab more" id="more" hidden>Tampilkan semua</button></p>
     <h3 class="sub">Kegiatan sekolah</h3>
     <ul class="pres acts">
       <li><span class="t b">2026</span><h3>Sosialisasi ke SMPN 3 Leles</h3><p>Pentingnya melanjutkan pendidikan menengah</p></li>
@@ -444,13 +471,22 @@ footer b{color:var(--gold-lt);font-family:'Plus Jakarta Sans',sans-serif}
   window.addEventListener('resize',function(){if(window.innerWidth>960)setMenu(false)});
 
 
-  /* Filter tingkat prestasi */
-  var tabs=[].slice.call(document.querySelectorAll('.tab')),items=[].slice.call(document.querySelectorAll('#pres li'));
+  /* Filter tingkat + batas tampilan prestasi */
+  var tabs=[].slice.call(document.querySelectorAll('.tab[data-f]')),items=[].slice.call(document.querySelectorAll('#pres li')),more=document.getElementById('more'),LIM=9,cur='all',all=false;
+  function render(){
+    var m=items.filter(function(li){return cur==='all'||li.getAttribute('data-level')===cur});
+    items.forEach(function(li){li.hidden=true});
+    m.forEach(function(li,i){li.hidden=!all&&i>=LIM});
+    more.hidden=all||m.length<=LIM;
+    more.textContent='Tampilkan semua ('+m.length+')';
+  }
   tabs.forEach(function(t){t.addEventListener('click',function(){
-    var f=t.getAttribute('data-f');
+    cur=t.getAttribute('data-f');all=false;
     tabs.forEach(function(x){x.setAttribute('aria-pressed',String(x===t))});
-    items.forEach(function(li){li.hidden=!(f==='all'||li.getAttribute('data-level')===f)});
+    render();
   })});
+  more.addEventListener('click',function(){all=true;render()});
+  render();
 
   /* Usia sekolah dihitung dari 5 Juli 1996 agar tidak basi */
   var now=new Date(),b=new Date(1996,6,5),age=now.getFullYear()-1996-(now<new Date(now.getFullYear(),6,5)?1:0);
