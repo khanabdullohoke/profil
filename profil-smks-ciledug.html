@@ -137,6 +137,17 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
 .pres h3{font-size:16px;font-weight:700;line-height:1.4}
 .pres p{font-size:14px;color:var(--muted);margin-top:4px}
 
+.pstats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:36px}
+.pstats div{padding:22px 20px 22px 0}
+.pstats div+div{padding-left:20px;border-left:1px solid var(--line)}
+.pstats b{display:block;font:800 30px/1 'Plus Jakarta Sans',sans-serif;color:var(--navy)}
+.pstats span{display:block;margin-top:6px;font-size:14px;color:var(--muted)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.tab{font:500 14px 'DM Sans',sans-serif;padding:9px 16px;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--mid);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.tab:hover{border-color:var(--navy)}
+.tab[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.sub{font-size:18px;margin:48px 0 16px}
+.pres li[hidden]{display:none}
 /* Ekskul */
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chips li{border:1px solid var(--line);background:#fff;padding:9px 18px;border-radius:99px;font-size:14.5px;color:var(--mid)}
@@ -181,6 +192,9 @@ footer b{color:var(--gold-lt);font-family:'Plus Jakarta Sans',sans-serif}
   .misi .w{grid-column:2}
   .jur li{grid-template-columns:1fr;gap:6px}
   .pres{grid-template-columns:1fr 1fr}
+  .pstats{grid-template-columns:1fr 1fr}
+  .pstats div:nth-child(3){padding-left:0;border-left:0}
+  .pstats div:nth-child(n+3){border-top:1px solid var(--line)}
   .pres li{padding-left:0!important;border-left:0!important}
   .pres li:nth-child(even){padding-left:24px!important;border-left:1px solid var(--line)!important}
 }
@@ -318,17 +332,31 @@ footer b{color:var(--gold-lt);font-family:'Plus Jakarta Sans',sans-serif}
 
 <section class="sec" id="prestasi">
   <div class="wrap">
-    <div class="head"><h2>Prestasi dan kegiatan</h2><p>Capaian siswa di berbagai bidang, serta kegiatan sekolah terbaru.</p></div>
-    <ul class="pres">
-      <li><span class="t">Juara 1</span><h3>Turnamen Voli VI Antar SMK Swasta</h3><p>Tingkat Kabupaten Garut, 2024</p></li>
-      <li><span class="t">Penghargaan</span><h3>Nominasi Pemain Terbaik Voli</h3><p>Kabupaten Garut, 2024</p></li>
-      <li><span class="t">Juara 1</span><h3>Karate</h3><p>Tingkat Nasional, 2018</p></li>
-      <li><span class="t">Juara 1</span><h3>Lomba Desain Teknologi</h3><p>Tingkat Sekolah, 2019</p></li>
-      <li><span class="t">Juara 2</span><h3>Bola Voli Putri</h3><p>Tingkat Kabupaten/Kota, 2018</p></li>
-      <li><span class="t">Juara 3</span><h3>Bola Voli Putri</h3><p>Tingkat Kabupaten/Kota, 2019</p></li>
-      <li><span class="t b">Kegiatan</span><h3>Re-akreditasi Program Pintar Bersama Daihatsu</h3><p>Persiapan bersama industri, TKR, 2025</p></li>
-      <li><span class="t b">Kegiatan</span><h3>Aksi Nyata Pesantren Ekologi</h3><p>Gerakan zero waste dan go green, 2025</p></li>
-      <li><span class="t b">Kegiatan</span><h3>Sosialisasi ke SMPN 3 Leles</h3><p>Pentingnya melanjutkan pendidikan, 2026</p></li>
+    <div class="head"><h2>Pencapaian yang membanggakan</h2><p>Rekam jejak siswa SMKS Ciledug Al Musaddadiyah Garut, dari tingkat regional hingga nasional, sepanjang 2022–2026.</p></div>
+    <div class="pstats">
+      <div><b>28+</b><span>Total prestasi 2022–2026</span></div>
+      <div><b>A</b><span>Akreditasi BAN-S/M</span></div>
+      <div><b>5.110+</b><span>Alumni berprestasi dan berkarier</span></div>
+      <div><b>1+</b><span>Alumni beasiswa PKNU Korea</span></div>
+    </div>
+    <div class="tabs" role="group" aria-label="Filter tingkat prestasi">
+      <button type="button" class="tab" data-f="all" aria-pressed="true">Semua</button>
+      <button type="button" class="tab" data-f="nasional" aria-pressed="false">Tingkat nasional</button>
+      <button type="button" class="tab" data-f="kabupaten" aria-pressed="false">Regional / kabupaten</button>
+    </div>
+    <ul class="pres" id="pres">
+      <li data-level="nasional"><span class="t">Juara 1</span><h3>Karate</h3><p>Tingkat nasional, 2018</p></li>
+      <li data-level="kabupaten"><span class="t">Juara 1</span><h3>Turnamen Voli VI Antar SMK Swasta</h3><p>Tingkat Kabupaten Garut, 2024</p></li>
+      <li data-level="kabupaten"><span class="t">Penghargaan</span><h3>Nominasi Pemain Terbaik Voli</h3><p>Kabupaten Garut, 2024</p></li>
+      <li data-level="kabupaten"><span class="t">Juara 3</span><h3>Bola Voli Putri</h3><p>Tingkat kabupaten/kota, 2019</p></li>
+      <li data-level="kabupaten"><span class="t">Juara 2</span><h3>Bola Voli Putri</h3><p>Tingkat kabupaten/kota, 2018</p></li>
+      <li data-level="sekolah"><span class="t">Juara 1</span><h3>Lomba Desain Teknologi</h3><p>Tingkat sekolah, 2019</p></li>
+    </ul>
+    <h3 class="sub">Kegiatan sekolah</h3>
+    <ul class="pres acts">
+      <li><span class="t b">2026</span><h3>Sosialisasi ke SMPN 3 Leles</h3><p>Pentingnya melanjutkan pendidikan menengah</p></li>
+      <li><span class="t b">2025</span><h3>Aksi Nyata Pesantren Ekologi</h3><p>Gerakan zero waste dan go green</p></li>
+      <li><span class="t b">2025</span><h3>Re-akreditasi Program Pintar Bersama Daihatsu</h3><p>Persiapan bersama industri, TKR</p></li>
     </ul>
   </div>
 </section>
@@ -414,6 +442,15 @@ footer b{color:var(--gold-lt);font-family:'Plus Jakarta Sans',sans-serif}
   drawer.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
   window.addEventListener('resize',function(){if(window.innerWidth>960)setMenu(false)});
+
+
+  /* Filter tingkat prestasi */
+  var tabs=[].slice.call(document.querySelectorAll('.tab')),items=[].slice.call(document.querySelectorAll('#pres li'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    var f=t.getAttribute('data-f');
+    tabs.forEach(function(x){x.setAttribute('aria-pressed',String(x===t))});
+    items.forEach(function(li){li.hidden=!(f==='all'||li.getAttribute('data-level')===f)});
+  })});
 
   /* Usia sekolah dihitung dari 5 Juli 1996 agar tidak basi */
   var now=new Date(),b=new Date(1996,6,5),age=now.getFullYear()-1996-(now<new Date(now.getFullYear(),6,5)?1:0);
