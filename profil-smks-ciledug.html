@@ -11,6 +11,8 @@
 <meta property="og:description" content="Membangun generasi berakhlak dan berdaya saing. 7 program keahlian, akreditasi A, sejak 1996."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.smkciledugalmusaddadiyah.sch.id"/>
+<link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD-8YPFS6i86EyZZNDUhwuam5ro_mtc9So2muvB7EDWz1Zp6rarLubvVS3vfVVoto_S6SaHlIPPnmNaddUugGUztWkJYhDwwT8CU1BcUuq9TNyxnHKa6B44iDBx6LjR1-z3r7_C34jviaWeOYgk4bNJHsziPV4KR5mQjY69HVhyphenhyphenR3STD4xp-b46x_HeR4/s64-rw/An8Em6pLCtVUNFZTK-rgdQG9pKiDxE1AR7m_1QO_5slD3C5qFXYq7S9suI1ztpViB_aUnbOGE2-Y71AU9SF3GjQzZ09xbw5aat-JT_7ptJ4VcfdGeJ73DWbHD9IDtVHa_16MjCj09HJ4eGBvZMo-removebg-preview.png"/>
+<meta property="og:image" content="https://www.smkciledugalmusaddadiyah.sch.id/og-image.jpg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -42,6 +44,7 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
 .nav{position:fixed;inset:0 0 auto 0;height:var(--nav);z-index:1000;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:11px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:15px;color:var(--navy);line-height:1.2}
+.brand .logo{width:38px;height:38px;object-fit:contain;flex-shrink:0}
 .brand i{font-style:normal;width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--navy),var(--blue-2));color:#fff;display:grid;place-items:center;font-size:12px}
 .links{display:flex;gap:2px}
 .links a,.drawer a.l{font-size:14px;font-weight:500;color:var(--mid);padding:8px 12px;border-radius:8px;transition:color .2s,background .2s}
@@ -118,7 +121,8 @@ section[id]{scroll-margin-top:calc(var(--nav) + 12px)}
 /* Sambutan */
 .sam{display:grid;grid-template-columns:260px 1fr;gap:64px;align-items:start}
 .kep{position:sticky;top:calc(var(--nav) + 24px);border-top:3px solid var(--gold);padding-top:20px}
-.kep .av{width:64px;height:64px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font:800 20px 'Plus Jakarta Sans',sans-serif;margin-bottom:16px}
+.kep .av{position:relative;width:176px;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,var(--pale),#fff);border:1px solid var(--line);display:grid;place-items:center;color:var(--navy);font:800 34px 'Plus Jakarta Sans',sans-serif;margin-bottom:18px}
+.kep .av img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom}
 .kep h3{font-size:17px}
 .kep p{font-size:14px;color:var(--muted);margin-top:4px}
 .sam .txt p{color:var(--mid);margin-bottom:16px;max-width:64ch}
@@ -201,7 +205,7 @@ footer b{color:var(--gold-lt);font-family:'Plus Jakarta Sans',sans-serif}
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="SMKS Ciledug Al-Musaddadiyah, ke atas"><i>SC</i><span>SMK Ciledug Al-Musaddadiyah</span></a>
+    <a class="brand" href="#top" aria-label="SMKS Ciledug Al-Musaddadiyah, ke atas"><img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD-8YPFS6i86EyZZNDUhwuam5ro_mtc9So2muvB7EDWz1Zp6rarLubvVS3vfVVoto_S6SaHlIPPnmNaddUugGUztWkJYhDwwT8CU1BcUuq9TNyxnHKa6B44iDBx6LjR1-z3r7_C34jviaWeOYgk4bNJHsziPV4KR5mQjY69HVhyphenhyphenR3STD4xp-b46x_HeR4/s76-rw/An8Em6pLCtVUNFZTK-rgdQG9pKiDxE1AR7m_1QO_5slD3C5qFXYq7S9suI1ztpViB_aUnbOGE2-Y71AU9SF3GjQzZ09xbw5aat-JT_7ptJ4VcfdGeJ73DWbHD9IDtVHa_16MjCj09HJ4eGBvZMo-removebg-preview.png" srcset="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD-8YPFS6i86EyZZNDUhwuam5ro_mtc9So2muvB7EDWz1Zp6rarLubvVS3vfVVoto_S6SaHlIPPnmNaddUugGUztWkJYhDwwT8CU1BcUuq9TNyxnHKa6B44iDBx6LjR1-z3r7_C34jviaWeOYgk4bNJHsziPV4KR5mQjY69HVhyphenhyphenR3STD4xp-b46x_HeR4/s76-rw/An8Em6pLCtVUNFZTK-rgdQG9pKiDxE1AR7m_1QO_5slD3C5qFXYq7S9suI1ztpViB_aUnbOGE2-Y71AU9SF3GjQzZ09xbw5aat-JT_7ptJ4VcfdGeJ73DWbHD9IDtVHa_16MjCj09HJ4eGBvZMo-removebg-preview.png 1x, https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD-8YPFS6i86EyZZNDUhwuam5ro_mtc9So2muvB7EDWz1Zp6rarLubvVS3vfVVoto_S6SaHlIPPnmNaddUugGUztWkJYhDwwT8CU1BcUuq9TNyxnHKa6B44iDBx6LjR1-z3r7_C34jviaWeOYgk4bNJHsziPV4KR5mQjY69HVhyphenhyphenR3STD4xp-b46x_HeR4/s152-rw/An8Em6pLCtVUNFZTK-rgdQG9pKiDxE1AR7m_1QO_5slD3C5qFXYq7S9suI1ztpViB_aUnbOGE2-Y71AU9SF3GjQzZ09xbw5aat-JT_7ptJ4VcfdGeJ73DWbHD9IDtVHa_16MjCj09HJ4eGBvZMo-removebg-preview.png 2x" width="38" height="38" alt="" decoding="async" referrerpolicy="no-referrer" onerror="var i=document.createElement('i');i.textContent='SC';this.replaceWith(i)"><span>SMK Ciledug Al-Musaddadiyah</span></a>
     <nav class="links" aria-label="Navigasi utama">
       <a href="#visi-misi">Visi Misi</a><a href="#jurusan">Jurusan</a><a href="#sambutan">Sambutan</a><a href="#prestasi">Prestasi</a><a href="#ekskul">Ekskul</a><a href="#spmb">SPMB</a><a href="#kontak">Kontak</a>
     </nav>
@@ -298,7 +302,7 @@ footer b{color:var(--gold-lt);font-family:'Plus Jakarta Sans',sans-serif}
 <section class="sec tint" id="sambutan">
   <div class="wrap sam">
     <div class="kep">
-      <div class="av">NR</div>
+      <div class="av">NR<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2dKM1s2DAgpQifSVcSDrcY0qt4ifK4QPcgMUxM9zURgf_o5eo5SKPr1s-OUTDoQl5AfIZpoisF3gpcAqEWbSbZGRJcC-X_tMw5c0HYxClxK263XHQ7MIMLJO5_DJZWdZUY1Qs6ptb6XxTI9DWnqLwpDFn8SqaJFAa9UmLFITj6Z73jdnTF6T8HXpPWps/s240-rw/WhatsApp_Image_2024-04-09_at_15.52.46-removebg-preview%20(1).png" srcset="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2dKM1s2DAgpQifSVcSDrcY0qt4ifK4QPcgMUxM9zURgf_o5eo5SKPr1s-OUTDoQl5AfIZpoisF3gpcAqEWbSbZGRJcC-X_tMw5c0HYxClxK263XHQ7MIMLJO5_DJZWdZUY1Qs6ptb6XxTI9DWnqLwpDFn8SqaJFAa9UmLFITj6Z73jdnTF6T8HXpPWps/s240-rw/WhatsApp_Image_2024-04-09_at_15.52.46-removebg-preview%20(1).png 1x, https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2dKM1s2DAgpQifSVcSDrcY0qt4ifK4QPcgMUxM9zURgf_o5eo5SKPr1s-OUTDoQl5AfIZpoisF3gpcAqEWbSbZGRJcC-X_tMw5c0HYxClxK263XHQ7MIMLJO5_DJZWdZUY1Qs6ptb6XxTI9DWnqLwpDFn8SqaJFAa9UmLFITj6Z73jdnTF6T8HXpPWps/s480-rw/WhatsApp_Image_2024-04-09_at_15.52.46-removebg-preview%20(1).png 2x" width="176" height="220" alt="KH. M. Nasrullah Ramdhan, M.Si, Kepala SMKS Ciledug Al-Musaddadiyah" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()"></div>
       <h3>KH. M. Nasrullah Ramdhan, M.Si</h3>
       <p>Kepala SMKS Ciledug Al-Musaddadiyah</p>
     </div>
